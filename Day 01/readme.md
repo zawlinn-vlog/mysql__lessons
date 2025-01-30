@@ -28,10 +28,22 @@
     CREATE DATABASE databasename;
 ```
 
+or
+
+```sh
+    CREATE DATABASE IF NOT EXISTS databasename;
+```
+
 or with encoding system &mdash;
 
 ```sh
     CREATE DATABASE databasename CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+```
+
+or
+
+```sh
+    CREATE DATABASE IF NOT EXISTS databasename CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 ```
 
 #### CHECK DATABASEs &mdash;
@@ -51,7 +63,12 @@ or with encoding system &mdash;
 ### HOW TO CREATE TABLEs &mdash;
 
 ```sh
-    CREATE TABLE tablename (column_name datatype, column_name datatype,...);
+    CREATE TABLE tablename (
+        column_name datatype,
+        column_name datatype,
+        column_name datatype,
+        ...
+        );
 ```
 
 #### CHECK TABLEs &mdash;
@@ -60,10 +77,34 @@ or with encoding system &mdash;
     SHOW TABLES;
 ```
 
+#### to check table of other database &mdash;
+
+```sh
+    SHOW TABLES FROM databasename;
+```
+
 or
 
 ```sh
+    SHOW TABLES IN databasename;
+```
+
+#### to check tables name and table type &mdash;
+
+```sh
     SHOW FULL TABLES;
+```
+
+#### to check tables name and table type of other database &mdash;
+
+```sh
+    SHOW FULL TABLES FROM databasename;
+```
+
+or
+
+```sh
+    SHOW FULL TABLES IN databasename;
 ```
 
 #### to check structured of table &mdash;
@@ -84,11 +125,50 @@ or
     SHOW COLUMNS FROM tablename;
 ```
 
+#### to check table of other database &mdash;
+
+```sh
+    SHOW COLUMNS FROM database.tablename;
+```
+
+or
+
+```sh
+    SHOW COLUMNS FROM tablename IN databasename;
+```
+
+#### RENAME TABLE &mdash;
+
+```sh
+    ALTER TABLE old_tablename RENAME TO new_tablename;
+```
+
 #### ADD NEW COLUMN to TABLES &mdash;
 
 ```sh
     ALTER TABLE tablename ADD new_column_name datatype;
 ```
+
+or
+
+```sh
+    ALTER TABLE tablename ADD COLUMN column_name datatype FIRST/AFTER existing_column_name;
+```
+
+or
+
+```sh
+    ALTER TABLE tablename
+    ADD COLUMN column_name datatype,
+    ADD COLUMN column_name datatype,
+    ....;
+```
+
+<br/>
+
+> FIRST - First Field.
+
+> After - AFTER an ITEM.
 
 #### Modified COLUMN &mdash;
 
@@ -96,10 +176,68 @@ or
     ALTER TABLE tablename MODIFY column_name datatype;
 ```
 
+#### RENAME COLUMN &mdash;
+
+```sh
+    ALTER TABLE table CHANGE COLUMN old_column_name new_column_name datatype;
+```
+
 #### DELETE COLUMN &mdash;
 
 ```sh
     ALTER TABLE tablename DROP COLUMN col_name;
+```
+
+#### DELETE TABLE &mdash;
+
+```sh
+    DROP TABLE tablename;
+```
+
+#### DELETE TABLE FROM OTHER DATABASE &mdash;
+
+```sh
+    DROP TABLE databasename.tablename;
+```
+
+or
+
+```sh
+    DROP TABLE IF EXISTS databasename.tablename;
+```
+
+##### DELETE MULTI TABLE &mdash;
+
+```sh
+    DROP TABLE databasename.tablename, databasename.tablename, databasename.tablename,...;
+```
+
+or
+
+```sh
+    DROP TABLE IF EXISTS databasename.tablename, databasename.tablename, databasename.tablename, ...;
+```
+
+### TURNCATE TABLE &mdash;
+
+```sh
+    TURNCATE TABLE tablename;
+```
+
+or
+
+```sh
+    TURNCATE TABLE databasename.tablename;
+```
+
+or
+
+```sh
+    DELETE FROM tablename;
+```
+
+```sh
+    DELETE FROM databasename.tablename;
 ```
 
 <br/>
