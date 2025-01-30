@@ -221,13 +221,13 @@ or
 ### TURNCATE TABLE &mdash;
 
 ```sh
-    TURNCATE TABLE tablename;
+    TRUNCATE TABLE tablename;
 ```
 
 or
 
 ```sh
-    TURNCATE TABLE databasename.tablename;
+    TRUNCATE TABLE databasename.tablename;
 ```
 
 or
