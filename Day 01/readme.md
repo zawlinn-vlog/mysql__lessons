@@ -273,13 +273,13 @@ or
 > `primary key` must be integer and to connect between tables and shld be auto increment;
 
 ```sh
-    CREATE TABLE tablename id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,username VARCHAR(255) NOT NULL UNIQUE;
+    CREATE TABLE tablename (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,username VARCHAR(255) NOT NULL UNIQUE);
 ```
 
 or
 
 ```sh
-    CREATE TABLE tablename id INT NOT NULL AUTO_INCREMENT,username VARCHAR(255) NOT NULL UNIQUE, ADD PRIMARY KEY(id);
+    CREATE TABLE tablename (id INT NOT NULL AUTO_INCREMENT,username VARCHAR(255) NOT NULL UNIQUE, ADD PRIMARY KEY(id));
 ```
 
 or
@@ -292,6 +292,41 @@ or
 
 ```sh
     ALTER TABLE tablename ADD COLUMN id INT NOT NULL PRIMARY KEY AUTO_INCREMENT;
+```
+
+REMOVE PRIMARY KEY
+
+- to remove primary key we shld remove auto increment
+
+```sh
+    ALTER TABLE tablename column_name datatype;  # (without auto_increment)
+
+    ALTER TABLE tablname column_name DROP PRIMARY KEY;
+```
+
+UNIQUE KEY &mdash;
+
+```sh
+    ALTER TABLE tablenmae column ADD UNIQUE(indexname);
+```
+
+or
+
+```sh
+    ALTER TABLE tablename column ADD CONSTRAINT index_name UNIQUE(columnname, columnname, etc.)
+```
+
+REMOVE UNIQUE &mdash;
+
+```sh
+    SHOW INDEX FROM tablename;
+    ALTER TABLE tablename DROP INDEX indexname;
+```
+
+CLONE TABLE WITH DATA &mdash;
+
+```sh
+    CREATE TABLE IF NOT EXISTS newTablename AS SELECT * FROM oldTablename; # NO PRIMARY, UNIQUE, AUTO_INCREMENT
 ```
 
 <br/>
