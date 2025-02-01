@@ -173,7 +173,24 @@ or
 #### Modified COLUMN &mdash;
 
 ```sh
-    ALTER TABLE tablename MODIFY column_name datatype;
+    ALTER TABLE tablename
+    MODIFY column_name datatype;
+```
+
+or
+
+```sh
+    ALTER TABLE tablename
+    MODIFY column_name datatype,
+    MODIFY column_name datatype,
+    MODIFY column_name datatype
+    etc... ;
+```
+
+#### MOVE COLUME INSIDE DATABASE &mdash;
+
+```sh
+    ALTER TABLE tablename MODIFY column_name datatype AFTER column_name;
 ```
 
 #### RENAME COLUMN &mdash;
@@ -186,6 +203,15 @@ or
 
 ```sh
     ALTER TABLE tablename DROP COLUMN col_name;
+```
+
+or
+
+```sh
+    ALTER TABLE tablename
+    DROP COLUMN col_name,
+    DROP COLUMN col_name,
+    etc...;
 ```
 
 #### DELETE TABLE &mdash;
@@ -238,6 +264,34 @@ or
 
 ```sh
     DELETE FROM databasename.tablename;
+```
+
+### NOT NULL
+
+### AUTO INCREMNET &mdash;
+
+> `primary key` must be integer and to connect between tables and shld be auto increment;
+
+```sh
+    CREATE TABLE tablename id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,username VARCHAR(255) NOT NULL UNIQUE;
+```
+
+or
+
+```sh
+    CREATE TABLE tablename id INT NOT NULL AUTO_INCREMENT,username VARCHAR(255) NOT NULL UNIQUE, ADD PRIMARY KEY(id);
+```
+
+or
+
+```sh
+    ALTER TALBLE tablename ADD COLUMN id INT NOT NULL AUTO_INCREMENT, ADD PRIMARY KEY(id);
+```
+
+or
+
+```sh
+    ALTER TABLE tablename ADD COLUMN id INT NOT NULL PRIMARY KEY AUTO_INCREMENT;
 ```
 
 <br/>

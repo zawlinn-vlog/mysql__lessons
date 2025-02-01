@@ -56,6 +56,12 @@ or
     SELECT column_name, column_name, etc. FROM tablename WHERE condition AND condition;
 ```
 
+PULL OUT NO MULTIPLE VALUEs &mdash;
+
+```sh
+    SELECT DISTINCT column_name FROM tablename;
+```
+
 <br/>
 
 <!-- ![Screenshot of Project](./s1.png) -->
