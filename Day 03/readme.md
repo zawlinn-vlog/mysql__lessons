@@ -62,6 +62,24 @@ eg.
     SELECT @num1+@num2;
 ```
 
+or
+
+```sh
+    SELECT @num1 := '10';
+    SELECT @num2 := '20';
+    SELECT @num3 := '30';
+    SELECT @num4 := '40';
+
+    SELECT @num1,@num2,@num3,@num4;
+    SELECT @num3*@num4;
+```
+
+CLEAR CMD &mdash;
+
+```sh
+    system clear;
+```
+
 <br/>
 
 <!-- ![Screenshot of Project](./s1.png) -->

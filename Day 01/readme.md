@@ -307,13 +307,13 @@ REMOVE PRIMARY KEY
 UNIQUE KEY &mdash;
 
 ```sh
-    ALTER TABLE tablenmae column ADD UNIQUE(indexname);
+    ALTER TABLE tablenmae ADD UNIQUE(indexname);
 ```
 
 or
 
 ```sh
-    ALTER TABLE tablename column ADD CONSTRAINT index_name UNIQUE(columnname, columnname, etc.)
+    ALTER TABLE tablename ADD CONSTRAINT index_name UNIQUE(columnname, columnname, etc.)
 ```
 
 REMOVE UNIQUE &mdash;

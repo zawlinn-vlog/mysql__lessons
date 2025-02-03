@@ -32,6 +32,9 @@ or
     INSERT INTO tablename VALUES ('string', int, etc...),('string', int, etc...),('string', int, etc...);
 ```
 
+<hr/>
+<br/>
+
 ### GET ALL DATA FROM DATABASE &mdash;
 
 ```sh
@@ -55,6 +58,9 @@ or
 ```sh
     SELECT column_name, column_name, etc. FROM tablename WHERE condition AND condition;
 ```
+
+<hr/>
+<br/>
 
 PULL OUT NO MULTIPLE VALUEs &mdash;
 
@@ -107,9 +113,42 @@ UPPER, LOWER &mdash;
     SELECT UPPER/LOWER(column_name) FROM tablename;
 ```
 
-1. first
-2. second
-3. third
+<hr/>
+<br/>
+
+#### CONDITIONs AND, OR, NOT &mdash;
+
+##### Operators in the WHERE clause
+
+= equal
+
+\> &nbsp;Greater Than
+
+\< Lessthan
+
+\>= Greaterthan or Equal
+
+\<= Lessthan or Equal
+
+<> NOT Equal, Note: In some versions of `SQL` this operator may be written as `!=`
+
+`BETWEEN` Between as a certain range
+
+`LIKE` Search for a pattern
+
+`IN` To Specify multiple possible values for a cloumns
+
+<br/>
+
+```sh
+    SELECT * FROM tablename WHERE condition1 AND condition2 AND condition3,...;
+```
+
+or
+
+```sh
+    SELECT * FROM tablename WHERE condition1 OR condition2 AND NOT condition3,...;
+```
 
 <br/>
 
