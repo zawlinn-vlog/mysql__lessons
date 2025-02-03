@@ -339,7 +339,7 @@ What I use packages are &mdash;
 
 <br>
 
-[![GitHub: Introduction](https://img.shields.io/badge/github_and_ssh-000?style=for-the-badge&logo=ko-fi&logoColor=white)](#)
+[![mySQL: Introduction](https://img.shields.io/badge/Relational_Database_Management_System_—-000?style=for-the-badge—=ko-fi—=white)](#)
 
 📫 Reach me out!
 

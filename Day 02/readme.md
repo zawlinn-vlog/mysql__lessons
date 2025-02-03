@@ -62,6 +62,55 @@ PULL OUT NO MULTIPLE VALUEs &mdash;
     SELECT DISTINCT column_name FROM tablename;
 ```
 
+or
+
+CONCAT &mdash;
+
+```sh
+    SELECT CONCAT (column_name, column_name, ...) FROM tablename;
+```
+
+CONCAT_WS &mdash;
+
+```sh
+    SELECT CONCAT_WS(' - ', column_name, column_name, etc...) FROM tablename;
+```
+
+SUBSTRING &mdash;
+
+```sh
+    SELECT SUBSTRING(column_name, start, length) FROM tablename;
+```
+
+or
+
+```sh
+    SELECT SUBSTR(column_name, start, length) FROM tablename;
+```
+
+ALIAS (NICK NAME) &mdash;
+
+```sh
+    SELECT column_name AS alias_name FROM tablename;
+```
+
+REPLACE &mdash;
+
+```sh
+
+    SELECT REPLACE(column_name, old_letter, new_letter) AS alias_name FROM tablename;
+```
+
+UPPER, LOWER &mdash;
+
+```sh
+    SELECT UPPER/LOWER(column_name) FROM tablename;
+```
+
+1. first
+2. second
+3. third
+
 <br/>
 
 <!-- ![Screenshot of Project](./s1.png) -->
@@ -72,7 +121,7 @@ What I use packages are &mdash;
 
 <br>
 
-[![GitHub: Introduction](https://img.shields.io/badge/github_and_ssh-000?style=for-the-badge&logo=ko-fi&logoColor=white)](#)
+[![mySQL: Introduction](https://img.shields.io/badge/Relational_Database_Management_System_—-000?style=for-the-badge—=ko-fi—=white)](#)
 
 📫 Reach me out!
 
