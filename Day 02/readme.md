@@ -150,6 +150,36 @@ or
     SELECT * FROM tablename WHERE condition1 OR condition2 AND NOT condition3,...;
 ```
 
+<hr/>
+<br/>
+
+ORDER &mdash;
+
+```sh
+    SELECT * FROM tablename ORDER BY column_name ASC|DESC;
+```
+
+or
+
+```sh
+    SELECT column_name, column_name, etc. FROM tablename ORDER BY num;
+```
+
+<hr>
+<br/>
+
+LIMIT Clause &mdash;
+
+```sh
+    SELECT column_name, column_name, etc. FROM table_name WHERE condition LIMIT num;
+```
+
+or
+
+```sh
+    SELECT column_name, column_name, etc. FROM table_name WHERE condition LIMIT num ;
+```
+
 <br/>
 
 <!-- ![Screenshot of Project](./s1.png) -->
