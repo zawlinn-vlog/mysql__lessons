@@ -279,7 +279,7 @@ or
 or
 
 ```sh
-    CREATE TABLE tablename (id INT NOT NULL AUTO_INCREMENT,username VARCHAR(255) NOT NULL UNIQUE, ADD PRIMARY KEY(id));
+    CREATE TABLE tablename (id INT NOT NULL AUTO_INCREMENT,username VARCHAR(255) NOT NULL UNIQUE, PRIMARY KEY(id));
 ```
 
 or
@@ -305,6 +305,10 @@ REMOVE PRIMARY KEY
 ```
 
 UNIQUE KEY &mdash;
+
+```sh
+    CREATE TABLE IF NOT EXISTS tablename (column_name, column_name, etc., PRIMARY KEY(col_name), UNIQUE KEY(index_name));
+```
 
 ```sh
     ALTER TABLE tablenmae ADD UNIQUE(indexname);

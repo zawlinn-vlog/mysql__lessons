@@ -120,23 +120,23 @@ UPPER, LOWER &mdash;
 
 ##### Operators in the WHERE clause
 
-= equal
+= &nbsp; &nbsp; equal
 
-\> &nbsp;Greater Than
+\> &nbsp; &nbsp; Greater Than
 
-\< Lessthan
+\< &nbsp; &nbsp; Lessthan
 
-\>= Greaterthan or Equal
+\>= &nbsp; &nbsp; Greaterthan or Equal
 
-\<= Lessthan or Equal
+\<= &nbsp; &nbsp; Lessthan or Equal
 
-<> NOT Equal, Note: In some versions of `SQL` this operator may be written as `!=`
+<> &nbsp; &nbsp; NOT Equal, Note: In some versions of `SQL` this operator may be written as `!=`
 
-`BETWEEN` Between as a certain range
+`BETWEEN` &nbsp; &nbsp; Between as a certain range
 
-`LIKE` Search for a pattern
+`LIKE` &nbsp; &nbsp; Search for a pattern
 
-`IN` To Specify multiple possible values for a cloumns
+`IN` &nbsp; &nbsp; To Specify multiple possible values for a cloumns
 
 <br/>
 
@@ -144,10 +144,73 @@ UPPER, LOWER &mdash;
     SELECT * FROM tablename WHERE condition1 AND condition2 AND condition3,...;
 ```
 
-or
+OR
+
+```sh
+    SELECT * FROM tablename WHERE condition1 OR condition2 OR condition3,...;
+```
+
+OR AND NOT &mdash;
 
 ```sh
     SELECT * FROM tablename WHERE condition1 OR condition2 AND NOT condition3,...;
+```
+
+BETWEEN &mdash;
+
+```sh
+    SELECT * FROM tablename WHERE column_name BETWEEN num AND num;
+```
+
+IN &mdash;
+
+```sh
+    SELECT * FROM tablename WHERE column_name IN ('string', 'string',...);
+```
+
+NOT IN &mdash;
+
+```sh
+    SELECT * FROM tablename WHERE column_name NOT IN ('num', 'num',...);
+```
+
+LIKE &mdash;
+
+```sh
+    SELECT * FROM tablename WHERE column_name LIKE pattern;
+```
+
+#### PATTERNs &mdash;
+
+- %a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; END word with `a`.
+- a% &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; START word with `a`.
+- %or% &nbsp; &nbsp; &nbsp; Any word but must include `or` letter in it;
+- \_a% &nbsp; &nbsp; &nbsp; Any word but second letter must be `a`;
+- a\_% &nbsp; &nbsp; &nbsp; Start with `a` but must be at least 2 letters;\
+- a\_%\_% &nbsp; &nbsp; &nbsp; Start with `a` but must be at least 3 letters;\
+- a%o &nbsp; &nbsp; &nbsp; Start with `a` and end with `o`
+
+<br />
+
+```sh
+    SELECT * FROM tablename WHERE column_name LIKE 'a_%_%';
+```
+
+<hr/>
+<br/>
+
+### CALCULATE FUNCTIONs &mdash;
+
+COUNT(), AVG(), SUM(), MIN() and MAX()
+
+```sh
+    SELECT COUNT(column_name) FROM tablename ;
+```
+
+or
+
+```sh
+    SELECT * FROM tablename WHERE column_name = (SELECT MIN(column_name) FROM tablename);
 ```
 
 <hr/>
