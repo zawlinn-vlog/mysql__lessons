@@ -80,6 +80,27 @@ CLEAR CMD &mdash;
     system clear;
 ```
 
+### DATA TYPEs &mdash;
+
+#### STRING DATA TYPEs &mdash;
+
+| DATATYPE                  | DESCRIPTION                                                                         |
+| ------------------------- | ----------------------------------------------------------------------------------- |
+| CHAR(size)                | A fixed length String (can contain letters, numbers, special characters) 0 - 255    |
+| VARCHAR(size)             | A variable length String (can contain letters, numbers, special characters) 0 - 255 |
+| TEXT                      | Hold a string with maximum size 68,xxx (6kb)                                        |
+| TINYTEXT                  | Hold a string with maximun size 255 (255bytes)                                      |
+| MEDIUMTEXT                | Hold a string with maximun size 16,xxx,xxx (16mb)                                   |
+| LONGTEXT                  | Hold a string with maximun size 4,xxx,xxx,xxx (4Gb)                                 |
+| BINARY(size)              | Equal to CHAR(size), but store binary bit strings 0 - 255                           |
+| VARBINARY(size)           | Equal to VARCHAR(size), but store binary bit strings 0 - 255                        |
+| BLOB()                    | For BLOB(Binary Large Objects), maximun size 68,xxx (6kb)                           |
+| TINYBLOB()                | For BLOB(Binary Large Objects), maximun size 255 (255b)                             |
+| MEDIUMBLOB()              | For BLOB(Binary Large Objects), maximun size 16,xxx,xxx (16mb)                      |
+| LONGBLOB()                | For BLOB(Binary Large Objects), maximun size 4,xxx,xxx,xxx (4Gb)                    |
+| ENUM('val1', 'val2', ...) |                                                                                     |
+| SET('val1', 'val2', ...)  |                                                                                     |
+
 <br/>
 
 <!-- ![Screenshot of Project](./s1.png) -->
