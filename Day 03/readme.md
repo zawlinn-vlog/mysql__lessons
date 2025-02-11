@@ -140,6 +140,16 @@ USER INPUT
 
 > NOTE: FLOAT for SCIENCE APP
 
+```sh
+    CREATE TABLE IF NOT EXISTS items (id INT NOT NULL AUTO_INCREMENT, name VARCHAR(20), purchasePrice INT(4) SIGNED, sellprice INT(4) UNSIGNED, status BOOL, PRIMARY KEY (id));
+```
+
+and then
+
+```sh
+    INSERT INTO items (name, purchasePrice, sellprice, status) VALUES ('water', 9000, 9500, 0), ('coffee', -100, 200, 1), ('cake', 800, 100,0), ('snack', -250.56, 350.77, 1), ('jam', -1000, 2000, 0);
+```
+
 <br />
 
 #### DATE DATA TYPEs &mdash;
