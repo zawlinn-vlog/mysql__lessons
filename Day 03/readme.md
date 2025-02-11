@@ -101,9 +101,24 @@ CLEAR CMD &mdash;
 | ENUM('val1', 'val2', ...) | A String Object that can be only one value and choose from a lists you already defined    |
 | SET('val1', 'val2', ...)  | A String Object that can be one value or more but choose from a lists you already defined |
 
+CHAR
+
+- CHAR is faster for fixed length TEXT (eg. telephone numbers, zip code, YES/NO, Y/N, Male, Female M/F)
+
+CHAR(4) Vs VARCHAR(4)
+
+USER INPUT
+
+| VALUE     | CHAR(4)                           | Storage | VARCHAR(4) | Storage |
+| --------- | --------------------------------- | ------- | ---------- | ------- |
+| ''        | \' &nbsp; &nbsp; &nbsp; &nbsp; \' | 4bytes  | ''         | 1bytes  |
+| 'ab'      | ' ab &nbsp; &nbsp; \'             | 4bytes  | 'ab'       | 3bytes  |
+| 'abcd'    | 'abc &nbsp; \'                    | 4bytes  | 'abc'      | 5bytes  |
+| 'abcdefg' | 'abcd'                            | 4bytes  | 'abcd'     | 5bytes  |
+
 ### Numberic DATA TYPEs &mdash;
 
-#### STRING DATA TYPEs &mdash;
+#### Numberic DATA TYPEs &mdash;
 
 | DATATYPE                  | DESCRIPTION                                                                                    |
 | ------------------------- | ---------------------------------------------------------------------------------------------- |
@@ -125,7 +140,53 @@ CLEAR CMD &mdash;
 
 > NOTE: FLOAT for SCIENCE APP
 
+<br />
+
+#### DATE DATA TYPEs &mdash;
+
+| DATATYPE  | DESCRIPTION                                                                                                                    |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| DATE      | A `DATE`, FORMAT: `YYYY-MM-DD`, The Support rang is from `1000-01-01` To `9999-12-31`.                                         |
+| DATETIME  | A `DATE` and `TIME` combination, FORMAT `YYYY-MM-DD hh:mm:ss` the support range `1000-01-01 00:00:00` To `9999-12-31 23:59:59` |
+| TIMESTAMP | A `TIMESTAMP` FORMAT `YYYY-MM-DD hh:mm:ss`                                                                                     |
+| TIME      | A `TIME`. FORMAT `hh:mm:ss`                                                                                                    |
+| YEAR      | A `YEAR` with four-digit fomat                                                                                                 |
+
 <br/>
+
+EXERCISE
+
+```sh
+    SELECT CURRENT_DATE(); ## DATE FROM SERVER
+    SELECT CURDATE() ## LOCAL COMPUTER DATE
+```
+
+```sh
+    SELECT CURRENT_TIME(); ## TIME FROM SERVER
+    SELECT CURTIME() ## LOCAL COMPUTER TIME
+```
+
+```sh
+    SELECT CURRENT_TIMESTAMP(); ## DATETIME FROM SERVER
+    SELECT CURRENT_TIMESTAMP; ## DATETIME FROM SERVER
+    SELECT NOW() ## LOCAL COMPUTER DATETIME
+    SELECT SYSDATE() ## LOCAL COMPUTER DATETIME
+```
+
+INTERVAL &mdash;
+
+```sh
+    SELECT NOW(), NOW() - INTERVAL 1 YEAR; # MONTH, DAY, HOUR, MINUTE, SECOND AND MICROSECOND
+```
+
+LAST DAY
+
+```sh
+    SELECT NOW(), LAST_DATE(NOW());
+    SELECT NOW(), LAST_DATE(CURRENT_DATE());
+    SELECT NOW(), LAST_DATE(CURDATE());
+    SELECT NOW(), LAST_DATE(CURRENT_TIMESTAMP());
+```
 
 <!-- ![Screenshot of Project](./s1.png) -->
 
