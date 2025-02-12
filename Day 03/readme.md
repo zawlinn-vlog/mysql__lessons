@@ -153,6 +153,12 @@ and then
 | integer | fixed-point                                                                                                                                                      | Floating-point |
 | INTEGER | DECIMAL(Total Number of digits, Digit after decimal) eg. 999.99 is 5 digits and 2 decimal digits (fixed-point data type) eg. DECIMAL(5,3)= 20.234, 20.5 = 20.500 | FLOAT/DOUBLE   |
 
+
+> NOTE: DECIMAL data type is fixed-point type and calculate are exact
+
+> NOTE: FLOAT & DOUBLE data type are floating-point types and calculation are approximate.
+
+
 <br />
 
 #### DATE DATA TYPEs &mdash;
