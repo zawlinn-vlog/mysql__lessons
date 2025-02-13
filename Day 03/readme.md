@@ -158,6 +158,10 @@ and then
 
 > NOTE: FLOAT & DOUBLE data type are floating-point types and calculation are approximate.
 
+```sh
+    CREATE TABLE IF NOT EXIT purchases (id INT NOT NULL AUTO_INCREMENT, items VARCHAR(20) NOT NULL, price FLOAT, total FLOAT(4), PRIMARY KEY(id), UNIQUE(items));
+```
+
 
 <br />
 
