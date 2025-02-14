@@ -153,7 +153,6 @@ and then
 | integer | fixed-point                                                                                                                                                      | Floating-point |
 | INTEGER | DECIMAL(Total Number of digits, Digit after decimal) eg. 999.99 is 5 digits and 2 decimal digits (fixed-point data type) eg. DECIMAL(5,3)= 20.234, 20.5 = 20.500 | FLOAT/DOUBLE   |
 
-
 > NOTE: DECIMAL data type is fixed-point type and calculate are exact
 
 > NOTE: FLOAT & DOUBLE data type are floating-point types and calculation are approximate.
@@ -161,7 +160,6 @@ and then
 ```sh
     CREATE TABLE IF NOT EXIT purchases (id INT NOT NULL AUTO_INCREMENT, items VARCHAR(20) NOT NULL, price FLOAT, total FLOAT(4), PRIMARY KEY(id), UNIQUE(items));
 ```
-
 
 <br />
 
@@ -209,6 +207,29 @@ LAST DAY
     SELECT NOW(), LAST_DATE(CURRENT_DATE());
     SELECT NOW(), LAST_DATE(CURDATE());
     SELECT NOW(), LAST_DATE(CURRENT_TIMESTAMP());
+```
+
+DATE FORMAT
+
+```sh
+    SELECT NOW(), DATE_FORMAT(NOW(), '%y-%m-01');
+```
+
+DATE SUB
+
+```sh
+    SELECT DATE_SUB(NOW(), INTERVAL 10 DAY);
+    SELECT SUBDATE(NOW(), INTERVAL 10 DAY);
+```
+
+```sh
+    SELECT column, DAY(datecol|time) FROM tablename; # DAYNAME, MONTH, MONTHNAME, YEAR, HOUR, MINUTE and SECOND
+```
+
+BETWEEN AND
+
+```sh
+    SELECT column FROM tablename WHERE YEAR(datecol|time) BETWEEN val AND val;
 ```
 
 <!-- ![Screenshot of Project](./s1.png) -->
